@@ -1,0 +1,11 @@
+{% extends "app_login/base.html" %}
+
+{% block content %}
+    <h1>Ingresa tu nombre</h1>
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" name="nombre" placeholder="Nombre" required>
+        <input type="text" name="apellido" placeholder="Apellido" required>
+        <button type="submit">Enviar</button>
+    </form>
+{% endblock %}
